@@ -34,7 +34,7 @@ tl = reg.fit_predict(sd)
 #adding a clusters column to training dataset and initializing 3d plotting
 tds['clusters'] = tl
 fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+ax = plt.axes(projection='3d')
 
 for i in range(5):
     cluster_data = tds[tds['clusters'] == i]
